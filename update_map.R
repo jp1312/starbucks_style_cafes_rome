@@ -68,13 +68,15 @@ openmap <- leaflet(data = Points) %>%
 #      maxClusterRadius=35, 
 #      disableClusteringAtZoom=14),
     popup = ~popups) %>%
-  addFullscreenControl(pseudoFullscreen = TRUE) %>%
+  addFullscreenControl() %>%
   addSearchMarker(
     targetGroup = 'cafes',
-    options = searchMarkersOptions(zoom=16, openPopup = TRUE)) %>%
-  addControl("<P>Search a cafe<br/>by name<br/><ul><li>Yeah</li><li>Circus</li><li>Baylon</li><li>...</li></P>",
-                                                                          position='topright') 
+    options = searchMarkersOptions(zoom=16, openPopup = TRUE)) 
+ #%>%
+ # addControl("<P>Search a cafe<br/>by name<br/><ul><li>Yeah</li><li>Circus</li><li>Baylon</li><li>...</li></P>",
+ #                                                                         position='topright') 
+
 openmap
 
 # saveWidget(frameableWidget(openmap), "C:/Users/pc/Documents/slowdata/post/starbucks_style_cafes_rome/git/web/openmapFrame.html")
-# saveWidget(openmap, "C:/Users/pc/Documents/slowdata/post/starbucks_style_cafes_rome/git/web/openmap.html", selfcontained = FALSE)
+saveWidget(openmap, "C:/Users/pc/Documents/slowdata/post/starbucks_style_cafes_rome/git/web/openmap.html", selfcontained = FALSE)

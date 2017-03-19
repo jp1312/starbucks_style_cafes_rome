@@ -79,4 +79,4 @@ openmap <- leaflet(data = Points) %>%
 openmap
 
 # saveWidget(frameableWidget(openmap), "C:/Users/pc/Documents/slowdata/post/starbucks_style_cafes_rome/git/web/openmapFrame.html")
-saveWidget(openmap, "C:/Users/pc/Documents/slowdata/post/starbucks_style_cafes_rome/git/web/openmap.html", selfcontained = FALSE)
+# saveWidget(openmap, "C:/Users/pc/Documents/slowdata/post/starbucks_style_cafes_rome/git/web/openmap.html", selfcontained = FALSE)
